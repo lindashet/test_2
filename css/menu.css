@@ -1,0 +1,283 @@
+/* 
+- Name: megamenu.js - style.css
+- Version: 1.0
+- Latest update: 29.01.2016.
+- Author: Mario Loncarek
+- Author web site: http://marioloncarek.com
+*/
+
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+Body - not related to megamenu
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+	z-index: 10;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+megamenu.js STYLE STARTS HERE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+Screen style's
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.menu-container {
+    width: 100%;
+    margin: 0 auto;
+	position: relative;
+}
+.menu-mobile {
+    display: none;
+    padding: 15px;
+}
+.menu-container a{
+	color: #082b6b;
+}
+.menu-mobile:after {
+    content: "\f394";
+    font-family: "Ionicons";
+    font-size: 1.7rem;
+    padding: 0;
+    float: right;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-25%);
+    -ms-transform: translateY(-25%);
+    transform: translateY(-25%);
+}
+
+.menu-dropdown-icon:before {
+    content: "\f489";
+    font-family: "Ionicons";
+    display: none;
+    cursor: pointer;
+    float: right;
+    padding: 15px 20px;
+}
+
+.menu > ul {
+    margin: 0 auto;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    position: relative;
+    /* IF .menu position=relative -> ul = container width, ELSE ul = 100% width */
+    box-sizing: border-box;
+	text-align: center;
+}
+
+.menu > ul:before,
+.menu > ul:after {
+    content: "";
+    display: table;
+}
+
+.menu > ul:after {
+    clear: both;
+}
+
+.menu > ul > li {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+.menu > ul > li a {
+    text-decoration: none;
+    padding: 0 15px;
+    display: block;
+	color: #082b6b;
+	
+}
+.menu > ul > li > a::after{
+    content: "";
+    display: block;
+    margin-top: 7px;
+    border-bottom: 4px solid transparent;
+}
+.menu > ul > li > a:hover::after {
+    border-bottom: 4px solid  #faad00!important;
+}
+
+.menu > ul > li > ul {
+    display: none;
+    width: 100%;
+    background-color: rgba(8,43,107,.8);
+    padding: 10px;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+	text-align: left;
+}
+
+.menu > ul > li > ul:before,
+.menu > ul > li > ul:after {
+    content: "";
+    display: table;
+}
+
+.menu > ul > li > ul:after {
+    clear: both;
+}
+
+.menu > ul > li > ul > li {
+    margin: 0;
+    padding-bottom: 0;
+    list-style: none;
+    width: 33.3333%;
+    background: none;
+    float: left;
+}
+
+.menu > ul > li > ul > li a {
+    color: #fff;
+    font-size: 0.875rem;
+    padding: 1px 0;
+    width: 95%;
+    display: block;
+    border-bottom: 1px solid #ccc;
+}
+.menu > ul > li > ul > li a:hover{
+	color: #faad00;
+}
+
+.menu > ul > li > ul > li > ul {
+    display: block;
+    padding: 0;
+    margin: 10px 0 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.menu > ul > li > ul > li > ul:before,
+.menu > ul > li > ul > li > ul:after {
+    content: "";
+    display: table;
+}
+
+.menu > ul > li > ul > li > ul:after {
+    clear: both;
+}
+
+.menu > ul > li > ul > li > ul > li {
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.menu > ul > li > ul > li > ul > li a {
+    border: 0;
+}
+
+.menu > ul > li > ul.normal-sub {
+    width: 250px;
+    left: auto;
+    padding: 10px 20px;
+}
+
+.menu > ul > li > ul.normal-sub > li {
+    width: 100%;
+}
+
+.menu > ul > li > ul.normal-sub > li a {
+    border: 0;
+    padding: 2px 0;
+}
+
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+Mobile style's
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media only screen and (max-width: 959px) {
+    .menu{
+        width: 100%;
+    }
+    .menu-mobile {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+    .menu-container {
+        width: 100%;
+    }
+    .menu-mobile {
+        display: block;
+    }
+    .menu-dropdown-icon:before {
+        display: block;
+		color: white;
+    }
+    .menu > ul {
+        display: none;
+    }
+    .menu > ul > li {
+        width: 100%;
+        float: none;
+        display: block;
+		clear: both;
+    }
+	.menu > ul > li:first-child > ul > li {
+		width: 100%;
+	}
+    .menu > ul > li a {
+        padding: 0px;
+        width: 100%;
+        display: block;
+		text-align: left;
+    }
+    .menu > ul > li > ul {
+        position: relative;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		max-height: 400px;
+    }
+    .menu > ul > li > ul.normal-sub {
+        width: 100%;
+    }
+    .menu > ul > li > ul > li {
+        float: none;
+        width: 100%;
+        margin-top: 2px;
+    }
+    .menu > ul > li > ul > li:first-child {
+        margin: 0;
+    }
+    .menu > ul > li > ul > li > ul {
+        position: relative;
+    }
+    .menu > ul > li > ul > li > ul > li {
+        float: none;
+    }
+	.menu > ul > li > ul > li > ul > li a {
+  	  font-size: 12px;
+	}
+    .menu .show-on-mobile {
+        display: block;
+    }
+}
+@media only screen and (max-width: 480px) {
+	.menu > ul > li > ul {
+		max-height: 170px;
+    }
+	.menu > ul > li > ul.normal-sub > li a {
+		padding: 0;
+	}
+}

@@ -1,0 +1,383 @@
+/* ----------------------------------------------------------------
+	Technology
+-----------------------------------------------------------------*/
+.features{
+    overflow: hidden;
+}
+.features .pic{
+    width: 50%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.features .pic::before{
+    position: absolute;
+    top: 50%;
+    margin-top: -7.5px;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+.features .pic.float-left::before{
+    right: -1px;
+    border-width: 15px 20px 15px 0;
+    border-color: transparent #ffffff transparent transparent;
+}
+.features .pic.float-right::before{
+    left: -1px;
+    border-width: 15px 0 15px 20px;
+    border-color: transparent transparent transparent #ffffff;
+}
+.features .text{
+    color: #666;
+    width: 50%;
+    height: 300px;
+    padding: 2rem 2rem 0 2rem;
+}
+.related .list{
+    background-size: cover;
+    background-position: center;
+}
+.related{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.related .box{
+    margin: 3rem 4rem;
+    padding: 1.5rem;
+    background-color:rgba(8,43,107,.6);
+}
+.related .box p{
+    min-height: 140px;
+}
+.features .text h3,.related h3{
+    font-size: 1.375rem;
+}
+/* ----------------------------------------------------------------
+	About
+-----------------------------------------------------------------*/
+.icon-circle{
+    display: inline-block;
+    border-width: 2px!important;
+}
+.icon-circle img{
+    width: 50px;
+    height: 50px;
+}
+.border-box{
+    border-width: 8px!important;
+    border-color: rgba(26,47,93,.2)!important;
+}
+.multiple-items .slick-slide {
+    margin: 0px 10px;
+}
+.multiple-items .slick-prev:before,.multiple-items .slick-next:before {
+    opacity: .2;
+}
+.multiple-items .slick-prev:hover:before,.multiple-items .slick-next:hover:before {
+    opacity: 1;
+}
+.mask-list{
+    min-height: 350px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    webkit-transform: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+}
+.mask-list::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(8,43,107,.4);
+}
+.mask-list .btn{
+    z-index: 1;
+}
+/* ----------------------------------------------------------------
+	Member
+-----------------------------------------------------------------*/
+.member-float{
+    position: fixed;
+    top: 70px;
+    left: 10px;
+    width: 100%;
+    z-index: 9;
+}
+.member-float .avatar{
+    width: 45px;
+    height: 45px;
+}
+.member-float .avatar img{
+    max-width: 45px;
+    max-height: 45px;
+}
+.avatar{
+    width: 220px;
+    height: 220px;
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.avatar img{
+    max-width: 220px;
+    max-height: 220px;
+}
+.member-banner{
+    background-size: cover;
+    height: 100%;
+}
+.member-banner .bg-dark{
+    background-color: rgba(8,43,107,.6)!important;
+}
+.member-banner .bg-dark h2{
+    font-weight: 300;
+}
+.tool-items .list{
+    height: 80px;
+    padding: 1rem;
+    background-color: rgba(8,43,107,.5);
+}
+.tool-items .slick-slide {
+    margin: 0px 10px;
+}
+.corner::before{
+    content: "";
+    background-image: url(../images/corner.jpg);
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+}
+.member-slider{
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.member-slider .slick-prev,.member-slider .slick-next {
+    z-index: 2;
+    color: white;
+    background-color: rgba(0,0,0,.4);
+    width: 30px;
+    height: 120px;
+}
+.member-slider .slick-prev:hover,.member-slider .slick-next:hover {
+    background-color: rgba(0,0,0,.6);
+    z-index: 2;
+}
+.member-slider .slick-prev {
+    left: 15px;
+}
+.member-slider .slick-next {
+    right: 15px;
+}
+.member-slider .slick-prev:before,
+.member-slider .slick-next:before {
+    color: white;
+}
+.member-slider .list{
+    padding: 150px 0 0 0;
+    background-size: auto 100%;
+    background-position: center;
+    position: relative;
+    webkit-transform: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+}
+.member-slider .list .d-flex{
+    font-size: 1.125rem;
+    background-color: rgba(8,43,107,.6);
+    height: 60px;
+    padding: 10px 0;
+}
+.rank-ul{
+    padding: 0;
+    list-style: none;
+}
+.rank-ul li{
+    overflow: hidden;
+    padding: 10px 0 10px 50px;
+    border-bottom: 1px dashed #c8c8c8;
+    position: relative;
+}
+.rank-ul li::before{
+    content: "1";
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    background-color: #faad00;
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    color: white;
+    text-align: center;
+    margin-top: -17.5px;
+    border-radius: 50%;
+}
+.rank-ul li:nth-child(2)::before{
+    content: "2";
+}
+.rank-ul li:nth-child(3)::before{
+    content: "3";
+}
+.rank-ul li:nth-child(4)::before{
+    content: "4";
+}
+.rank-ul li:nth-child(5)::before{
+    content: "5";
+}
+.rank-ul li:nth-child(6)::before{
+    content: "6";
+}
+.rank-ul li:nth-child(7)::before{
+    content: "7";
+}
+.rank-ul li:nth-child(8)::before{
+    content: "8";
+}
+.rank-ul li:nth-child(9)::before{
+    content: "9";
+}
+.rank-ul li:nth-child(10)::before{
+    content: "10";
+}
+.rank-ul li a{
+    display: block;
+    font-size: 1.125rem;
+}
+.rank-ul li .data{
+    display: block;
+    float: left;
+    color: #999;
+}
+.rank-ul li .view{
+    display: block;
+    float: right;
+    color: #999;
+}
+/* ----------------------------------------------------------------
+	Login
+-----------------------------------------------------------------*/
+.login{
+    overflow: hidden;
+}
+.login .login-form{
+    float: right;
+    width: 40%;
+    background-image: url(../images/about-11.jpg);
+    background-size: cover;
+    position: relative;
+}
+.login .login-form form{
+    position: relative;
+    z-index: 1;
+}
+.login .login-form form {
+    font-weight: 400;
+}
+.login .login-form::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(8,43,107,.5);
+}
+.underline{
+    text-decoration: underline;
+}
+.login .login-text{
+    overflow: hidden;
+}
+.benefits p{
+    font-size: 0.875rem;
+    margin-bottom: 0;
+}
+.benefits img{
+    width: 50px;
+}
+/* ----------------------------------------------------------------
+	IC-selector
+-----------------------------------------------------------------*/
+.specification h3{
+    font-weight: 300;
+}
+.specification h3 span{
+    font-size: 2.25rem;
+    border-bottom: 5px solid #faad00;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.solutions{
+    margin-bottom: -1.5rem;
+}
+.help-checkbox{
+    display: none;
+}
+.help-checkbox .custom-control{
+    padding-left: 2.5rem!important;
+}
+.selector-help .img {
+    padding: 150px 0 0 0;
+    background-size: auto 100%;
+    background-position: center;
+    position: relative;
+    webkit-transform: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+}
+.selector-help .img:hover{
+    background-size: auto 110%;
+}
+.selector-help .d-flex {
+    background-color: rgba(8,43,107,.6);
+    padding: 10px 40px;
+}
+.selector-help a:hover{
+    text-decoration: none;
+}
+@media only screen and (max-width: 1024px) {
+    .login .login-form{
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 959px) {
+    .features,.title-features{
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .title-features{
+        background-color: white;
+    }
+    .features .pic,.features .text{
+        width: 100%;
+        float: none;
+    }
+    .features .pic{
+        height: 250px;
+    }
+    .features .pic::before{
+        display: none;
+    }
+    .features .text{
+        height: auto;
+        padding: 2rem;
+    }
+    .related .box{
+        margin: 2rem;
+    }
+    .login .login-form{
+        width: 100%;
+        float: none;
+    }
+}
